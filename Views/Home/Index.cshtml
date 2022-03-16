@@ -1,0 +1,238 @@
+﻿@model Interesse
+@{
+  ViewData["Title"] = "Hotsite";
+}
+
+<div>
+  <div class="row">
+
+    <div class="col-md-4">
+      <div>
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p>
+          Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+          legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+          hendrerit.
+        </p>
+        <p>
+          Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+          legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+          hendrerit.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <img src="https://cdn.pixabay.com/photo/2019/01/08/18/19/salad-3921790_960_720.jpg" alt=""
+        style="width: 140%; height:70%">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div id="frm" style="border-width: 1px;
+        border-style: solid;
+        border-color: rgb(22, 22, 22);
+        display:grid;">
+        <h2 style="margin-left:10px">Entre em contato!:</h2>
+        <p style="margin-left:10px">Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+        <form method="POST" id="frmCadastro">
+
+            <label asp-for="Nome" class="col-md-4" >Nome:</label>
+            <input id="nome" asp-for="Nome" class="col-md-6"  />
+
+
+            <label asp-for="Email" class="col-md-4" >Email:</label>
+            <input id="email" asp-for="Email" class="col-md-6"  />
+
+
+
+            <label asp-for="Mensagem" class="col-md-4" >Mensagem (opcional):</label>
+            <textarea asp-for="Mensagem" id="mensagem" ></textarea>
+
+
+            <input type="submit" value="Enviar" id="BtnSubmit" style="margin-left: 70%;margin-bottom:20px;">
+
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="row">
+
+
+
+        <div class="col-md-4" style="width: 120px;height:100px">
+          <div class="col-md-4" style="margin-left:10%">
+            <div class="card" style="width: 120px;height:100px">
+              <img alt="" src="https://cdn.pixabay.com/photo/2016/07/31/20/54/calendar-1559935_960_720.png"
+                style="width: 120px; height:100px">
+
+            </div>
+            <div class="card-body">
+              <a href="#" data-toggle="modal" data-target="#Agenda" class="text-center">Agenda de Eventos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" style="width: 120px;height:100px">
+          <div class="col-md-4" style="margin-left:10%">
+            <div class="card" style="width: 120px;height:100px">
+              <img alt="" src="https://cdn.pixabay.com/photo/2020/08/03/09/43/medical-5459654_960_720.png"
+                style="width: 120px; height:100px">
+
+            </div>
+            <div class="card-body">
+              <a href="#" data-toggle="modal" data-target="#Dicas" class="text-center">Dicas de vida saudável</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4" style="width: 120px;height:100px">
+          <div class="col-md-4" style="margin-left:10%">
+            <div class="card" style="width: 120px;height:100px">
+              <img alt="" src="https://cdn.pixabay.com/photo/2021/09/16/18/47/money-6630755_960_720.png"
+                style="width: 120px; height:100px">
+
+            </div>
+            <div class="card-body">
+              <a href="#" data-toggle="modal" data-target="#Apoiadores" class="text-center">Apoiadores</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade show" id="Agenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  style="padding-right: 17px;" aria-modal="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="margin-left:195px;">Agenda</h5>
+
+      </div>
+      <div class="modal-body">
+        <div style="margin-left:110px;text-align:center; width:50%;">
+          <p>10/10/10 10h10min - Evento 1</p>
+
+          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae </p>
+        </div>
+        <br>
+        <div style="margin-left:110px;text-align:center; width:50%;">
+          <p>10/10/10 10h10min - Evento 1</p>
+
+          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae </p>
+        </div>
+        <div style="margin-left:110px;text-align:center; width:50%;">
+          <p>10/10/10 10h10min - Evento 1</p>
+
+          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Dicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="exampleModalLabel" class="modal-title" style="margin-left:125px;">Dicas de vida saúdavel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="margin-left:110px;text-align:left; width:50%;">
+
+
+          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae lengendos ar vix ad puten delectus
+            delicata usu. Vidit dissentiet eos.
+          </p>
+          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae lengendos ar vix ad puten delectus
+            delicata usu. Vidit dissentiet eos.
+          </p>
+          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae lengendos ar vix ad puten delectus
+            delicata usu. Vidit dissentiet eos.
+          </p>
+        </div>
+        <br>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="Apoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="exampleModalLabel" class="modal-title" style="margin-left:195px;">Apoiadores</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+        </button>
+      </div>
+
+      <div class="row" style="position: static;float:left;margin-bottom:30px">
+        <img alt="" class="img-fluid col-md-4"
+          src="https://cdn.pixabay.com/photo/2021/07/16/20/49/lion-6471831_960_720.png">
+
+        <div class="col-md-6" style="float: right;">
+          <h5>Lions Corp®</h5>
+          <h7>Empresa multinacional de comercio de produtos eletrônicos de consumo, software de computador e
+            computadores pessoais.</h7>
+        </div>
+
+      </div>
+
+      <div class="row" style="position: static;float:left;margin-bottom:30px">
+        <img alt="" class="img-fluid col-md-4"
+          src="https://cdn.pixabay.com/photo/2017/06/02/19/21/moose-2367114_960_720.png">
+
+        <div class="col-md-6" style="float: right;">
+          <h5>Moose.com®</h5>
+          <h7>Empresa expecializada em artigos esportivos e dicas de saude</h7>
+        </div>
+
+      </div>
+
+      <div class="row" style="position: static;float:left;margin-bottom:30px">
+        <img alt="" class="img-fluid col-md-4"
+          src="https://cdn.pixabay.com/photo/2013/07/13/10/52/four-leaf-clover-157968_960_720.png">
+
+        <div class="col-md-6" style="float: right;">
+          <h5>4-Leaf Bank®</h5>
+          <h7>Empresa expecializada em stream e marketing digital</h7>
+        </div>
+
+      </div>
+
+
+      <div class="row" style="position: static;float:left;margin-bottom:30px">
+        <img alt="" class="img-fluid col-md-4"
+          src="https://cdn.pixabay.com/photo/2020/01/21/17/54/bear-4783522_960_720.png">
+
+        <div class="col-md-6" style="float: right;">
+          <h5>BearDream</h5>
+          <h7>Eempresa expecializada em acessoria e investimentos online</h7>
+        </div>
+
+      </div><br>
+    </div>
+
+  </div>
+</div>
+</div>
